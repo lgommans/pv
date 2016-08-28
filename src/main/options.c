@@ -53,6 +53,7 @@ opts_t opts_parse(int argc, char **argv)
 		{"timer", 0, 0, 't'},
 		{"eta", 0, 0, 'e'},
 		{"fineta", 0, 0, 'I'},
+		{"meta", 0, 0, 'm'},
 		{"rate", 0, 0, 'r'},
 		{"average-rate", 0, 0, 'a'},
 		{"bytes", 0, 0, 'b'},
@@ -85,7 +86,7 @@ opts_t opts_parse(int argc, char **argv)
 	int option_index = 0;
 #endif
 	char *short_options =
-	    "hVpteIrabTA:fnqcWD:s:l0i:w:H:N:F:L:B:CESR:P:d:";
+	    "hVpteImrabTA:fnqcWD:s:l0i:w:H:N:F:L:B:CESR:P:d:";
 	int c, numopts;
 	unsigned int check_pid;
 	int check_fd;
@@ -217,6 +218,10 @@ opts_t opts_parse(int argc, char **argv)
 			break;
 		case 'e':
 			opts->eta = 1;
+			numopts++;
+			break;
+		case 'm':
+			opts->meta = 1;
 			numopts++;
 			break;
 		case 'r':

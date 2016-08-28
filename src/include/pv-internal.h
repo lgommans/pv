@@ -64,6 +64,7 @@ struct pvstate_s {
 	unsigned char skip_errors;       /* skip read errors flag */
 	unsigned char stop_at_size;      /* set if we stop at "size" bytes */
 	unsigned char no_splice;         /* never use splice() */
+	unsigned char use_meta;          /* use momentary ETA, not averaged ETA */
 	unsigned long long rate_limit;   /* rate limit, in bytes per second */
 	unsigned long long target_buffer_size;  /* buffer size (0=default) */
 	unsigned long long size;         /* total size of data */

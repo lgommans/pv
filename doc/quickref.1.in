@@ -132,6 +132,10 @@ transfer rates and the total data size, how long it will be before
 completion.  This option will have no effect if the total data size cannot
 be determined.
 .TP
+.B \-m, \-\-meta
+Change the ETA to a momentary ETA, which shows the ETA based on the current
+transfer rate rather than the average transfer rate.
+.TP
 .B \-I, \-\-fineta
 Turn the ETA timer on, but display the estimated local time of arrival
 instead of time left.  When the estimated time is more than 6 hours in the

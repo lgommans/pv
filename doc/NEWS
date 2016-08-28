@@ -1,3 +1,7 @@
+1.6.1 - 28 August 2016
+  - new option "--meta" / "-m" to show the ETA based on the momentary (current)
+    transfer speed rather than the average transfer speed.
+
 1.6.0 - 15 March 2015
   - fix lstat64 support when unavailable - separate patches supplied by
     Ganael Laplanche and Peter Korsgaard

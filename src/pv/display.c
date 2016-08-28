@@ -70,6 +70,24 @@ static long pv__calc_percentage(long long so_far, const long long total)
 
 /*
  * Given how many bytes have been transferred, the total byte count to
+ * transfer, and the current transfer rate, return the estimated number
+ * of seconds until completion.
+ */
+static long pv__calc_meta(const long long so_far, const long long total,
+			  const long double rate)
+{
+	long long amount_left;
+
+	if (so_far < 1)
+		return 0;
+
+	amount_left = total - so_far;
+
+	return (long) amount_left / rate;
+}
+
+/*
+ * Given how many bytes have been transferred, the total byte count to
  * transfer, and how long it's taken so far in seconds, return the estimated
  * number of seconds until completion.
  */
@@ -650,10 +668,20 @@ static char *pv__format(pvstate_t state,
 	/* ETA (only if size is known) - set up the display string. */
 	if (((state->components_used & PV_DISPLAY_ETA) != 0)
 	    && (state->size > 0)) {
-		eta =
-		    pv__calc_eta(total_bytes - state->initial_offset,
-				 state->size - state->initial_offset,
-				 elapsed_sec);
+		if (state->use_meta) {
+			eta =
+			    pv__calc_meta(total_bytes -
+					  state->initial_offset,
+					  state->size -
+					  state->initial_offset, rate);
+		} else {
+			eta =
+			    pv__calc_eta(total_bytes -
+					 state->initial_offset,
+					 state->size -
+					 state->initial_offset,
+					 elapsed_sec);
+		}
 
 		/*
 		 * Bounds check, so we don't overrun the suffix buffer. This
@@ -702,10 +730,20 @@ static char *pv__format(pvstate_t state,
 		struct tm *time_ptr;
 		char *time_format = NULL;
 
-		eta =
-		    pv__calc_eta(total_bytes - state->initial_offset,
-				 state->size - state->initial_offset,
-				 elapsed_sec);
+		if (state->use_meta) {
+			eta =
+			    pv__calc_meta(total_bytes -
+					  state->initial_offset,
+					  state->size -
+					  state->initial_offset, rate);
+		} else {
+			eta =
+			    pv__calc_eta(total_bytes -
+					 state->initial_offset,
+					 state->size -
+					 state->initial_offset,
+					 elapsed_sec);
+		}
 
 		/*
 		 * Bounds check, so we don't overrun the suffix buffer. This

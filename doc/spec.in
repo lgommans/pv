@@ -46,6 +46,10 @@ make test
 %doc README doc/NEWS doc/TODO doc/COPYING
 
 %changelog
+* Sun Aug 28 2016 Luc Gommans <pvchangelog@lucgommans.nl> 1.6.1-1
+- new option "--meta" / "-m" to show the ETA based on the momentary (current)
+  transfer speed rather than the average transfer speed.
+
 * Sun Mar 15 2015 Andrew Wood <andrew.wood@ivarch.com> 1.6.0-1
 - fix lstat64 support when unavailable - separate patches supplied by Ganael
   Laplanche and Peter Korsgaard

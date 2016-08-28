@@ -1,3 +1,16 @@
+NOTE: this source is taken from http://www.ivarch.com/programs/pv.shtml
+
+The latest released version is 1.6.0. I bumped the version for completeness,
+but I am not the maintainer. The version in this repository should not be
+considered a new release of pv. The maintainer (see site linked above) may or
+may not choose to include my changes in a future release.
+
+My changes are documented in the existing changelog, as well as in the commit
+history (the license requires this). The changes are available under the
+original license (see doc/COPYING).
+
+----------------------------------------------------------------------------
+
 Introduction
 ************
 

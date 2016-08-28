@@ -19,6 +19,7 @@ struct opts_s {           /* structure describing run-time options */
 	unsigned char timer;           /* timer flag */
 	unsigned char eta;             /* ETA flag */
 	unsigned char fineta;          /* absolute ETA flag */
+	unsigned char meta;            /* momentary ETA flag */
 	unsigned char rate;            /* rate counter flag */
 	unsigned char average_rate;    /* average rate counter flag */
 	unsigned char bytes;           /* bytes transferred flag */

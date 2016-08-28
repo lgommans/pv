@@ -98,6 +98,10 @@ void pv_state_set_format(pvstate_t state, unsigned char progress,
 	state->reparse_display = 1;
 }
 
+void pv_state_meta_set(pvstate_t state, unsigned char val)
+{
+	state->use_meta = val;
+}
 
 void pv_state_force_set(pvstate_t state, unsigned char val)
 {

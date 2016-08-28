@@ -36,6 +36,8 @@ void display_help(void)
 		{"-I", "--fineta", 0,
 		 N_
 		 ("show absolute estimated time of arrival (completion)")},
+		{"-m", "--meta", 0,
+		 N_("show ETA based on momentary transfer speed")},
 		{"-r", "--rate", 0,
 		 N_("show data transfer rate counter")},
 		{"-a", "--average-rate", 0,
