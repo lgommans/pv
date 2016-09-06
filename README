@@ -1,9 +1,11 @@
 NOTE: this source is taken from http://www.ivarch.com/programs/pv.shtml
 
-The latest released version is 1.6.0. I bumped the version for completeness,
-but I am not the maintainer. The version in this repository should not be
-considered a new release of pv. The maintainer (see site linked above) may or
-may not choose to include my changes in a future release.
+The latest released version is 1.6.0 and this repository is a modified clone
+of that release. I hope my changes will be used so I bumped the version in
+this repository for completeness, but I am not the maintainer. This
+repository should not be considered a new release of pv. The maintainer (see
+the site linked above) may or may not choose to include my changes in a
+future release.
 
 My changes are documented in the existing changelog, as well as in the commit
 history (the license requires this). The changes are available under the
@@ -68,23 +70,23 @@ Credit is also due to:
   Jakub Hrozek <jhrozek@redhat.com>
     - Fedora package maintainer
 
-  Antoine Beaupré <anarcat@debian.org>
+  Antoine BeauprÃ© <anarcat@debian.org>
     - Debian package maintainer
 
   Kevin Coyner <kcoyner@debian.org>
-  Cédric Delfosse <cedric@debian.org>
+  CÃ©dric Delfosse <cedric@debian.org>
     - previous Debian package maintainers
 
   Eduardo Aguiar <eduardo.oliveira@sondabrasil.com.br>
     - provided Portuguese (Brazilian) translation
 
-  Stéphane Lacasse <stephane@gorfou.ca>
+  StÃ©phane Lacasse <stephane@gorfou.ca>
     - provided French translation
 
   Marcos Kreinacke <public@kreinacke.com>
     - provided German translation
 
-  Bartosz Fe�ski <fenio@o2.pl> <http://skawina.eu.org/>
+  Bartosz Feñski <fenio@o2.pl> <http://skawina.eu.org/>
     - provided Polish translation along with Krystian Zubel
 
   Joshua Jensen
@@ -215,14 +217,14 @@ Credit is also due to:
   Jan Seda
     - found issue with splice() and SPLICE_F_NONBLOCK causing slowdown
 
-  André Stapf
+  AndrÃ© Stapf
     - pointed out formatting problem e.g. 13GB -> 13.1GB which should be
       shown 13.0GB -> 13.1GB; highlighted on-startup row swapping in -c
 
   Damon Harper <http://www.usrbin.ca/>
     - suggested "-D" / "--delay-start" option
 
-  Ganaël Laplanche <http://www.martymac.org>
+  GanaÃ«l Laplanche <http://www.martymac.org>
     - provided patch for lstat64 on systems that do not support it
 
   Peter Korsgaard <http://www.buildroot.net/>
@@ -234,7 +236,7 @@ Credit is also due to:
   Michiel Van Herwegen
     - reported and discussed bug with "-l" and ETA / size
 
-  Erkki Seppälä <http://www.inside.org/~flux/>
+  Erkki SeppÃ¤lÃ¤ <http://www.inside.org/~flux/>
     - provided patch implementing "-I"
 
 -----------------------------------------------------------------------------
